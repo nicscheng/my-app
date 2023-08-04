@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+body{
+    font-family: 'Courier Prime', monospace !important;
+}
+
+.bg-navbar{
+    background: none !important;
+    background-color: white !important;
+    color: black;
+    border-bottom: solid 2px black;
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 101;
+    
+}
+.my-logo{
+    width: 50px;
+}
+
+.nicole{
+    width: 70px;
+}
+
+.navlink{
+    color: black !important;
+    font-style: bold !important;
+    font-weight: 650 !important;
+    margin-left: 25px;
+}
+
+.intro-con{
+    display: flex;
+    width: 100%;
+    padding-left: 200px;
+    padding-right: 100px;
+    margin-top: 180px !important;
+}
+
+.logo-con{
+    display: flex;
+    justify-content: end;
+}
+
+.text-con{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+.desc-me{
+    padding-right: 280px;
+}
+
+.btn-gtk{
+    background: none !important;
+    height: max-content !important;
+    width: max-content !important;
+    border-radius: 0 !important;
+    border: solid 2px black !important;
+    box-shadow: -5px 5px 0px 0px black;
+    background-color: #FFCD1D !important;
+    color: black !important;
+    padding: 13px !important;
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+    font-weight: 600 !important;
+    
+}
+
+.con{
+    
+    height:937px;
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.main-logo{
+    width: 550px;
+    margin-right: 50px;
+}
+
+.main-nicole{
+    width: 400px;
+    
+}
+
+.bg-contact{
+    width: 100%;
+    background-color: black;
+    bottom: 0px;
+    position: absolute;
+    display: flex;
+    padding: 50px;
+    
+    
+}
+
+.contact-item{
+    color: white;
+    border: solid 2px white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-con{
+    height:879px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.skills-text{
+    width: 500px;
+    margin-top: 20px;
+}
+
+.desc-skills{
+    max-width: 700px;
+    display:block;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.language-logo{
+    margin-left: 40px;
+}
+
+.logo-name{
+    padding-top: 10px;
+}
+
+
+
+.bg-carousel{
+    height:879px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3{
+    color:black !important
+}
+
+.my-works{
+    padding-top: 100px;
+    
+}
+
+.myworks-png{
+    height: 60px;
+}
+
+.inner{
+    height: 100vh !important;
+    
+}
+
+.carousel-item-text{
+    color: black;
+}
+
+.carousel{
+    overflow:hidden;
+    height: 900px;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    z-index: 100;
+}
+
+.inner{
+    white-space: nowrap;
+    transition: transform 0.3s;
+    
+}
+
+.item{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    background-color: white;
+}
+
+.carousel-img{
+    width: 250px;
+    padding: 0 20px 0 20px;
+    
+}
+
+.carousel-item-text{
+    font-size: 1.14rem;
+    margin: 30px 0 30px 0;
+    padding: 0 20px 0 20px;
+    white-space: normal;
+    color: black;
+    text-align: left;
+    padding-left: 80px;
+}
+
+.carousel-item-title{
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.carousel-item-role{
+    font-style: italic;
+}
+
+.carousel-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.button-arrow{
+    background: none !important;
+    border: none;
+    cursor: pointer;
+   
+}
+
+.indicators{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.indicator-buttons{
+    border: none;
+    cursor: pointer;
+}
+
+.indicators > button {
+    margin: 5px;
+    background: none;
+}
+
+.indicator-symbol-active {
+    color: #FFCD1D;
+  }
+
+  .mywork-desc{
+    color:darkgrey;
+    font-family: monospace;
+    margin-top: 30px;
+    align-items: center !important;
+  }
+
+  .about-me{
+    height:879px;
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    justify-content: center !important;
+  }
+
+  .about-con{
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-pic{
+    display: flex;
+    width: 380px;
+    border-radius: 0 !important;
+    border: solid 3px black !important;
+    box-shadow: -10px 10px 0px 0px black;
+    
+  }
+
+  .pic-con{
+    display: flex;
+    justify-content: end;
+  }
+
+  .fullstack{
+    width: 450px;
+    margin-left: 50px;
+  }
+
+  .code{
+    width: 300px;
+    padding-top: 250px;
+    
+  }
+
+  .about-text-con{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    text-align: left;
+    
+    
+  }
+
+  .desc-about{
+    padding-right: 200px;
+    margin-left: 50px;
+    
+  }
+
+  .arrow{
+    padding-right: 8px;
+    
+  }
+
+  .right-side{
+    justify-content: space-evenly;
+  }
+
+  .three-desc{
+    padding-bottom: 10px;
+  }
+
+  .box-arrows{
+    padding-left: 10px;
+    display: inline-block;
+    
+  }
+
+  #desc-style{
+    font-weight: bold !important;
+  }
+
+  .btn-skills{
+    background: none !important;
+    height: max-content !important;
+    width: max-content !important;
+    border-radius: 0 !important;
+    border: solid 2px black !important;
+    box-shadow: -5px 5px 0px 0px black;
+    background-color: #FFCD1D !important;
+    color: black !important;
+    padding: 13px !important;
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+    font-weight: 600 !important;
+    margin-left: 50px;
+    padding-top: 10px;
+  }
+ 
+  .btn-works{
+    background: none !important;
+    height: max-content !important;
+    width: max-content !important;
+    border-radius: 0 !important;
+    border: solid 2px black !important;
+    box-shadow: -5px 5px 0px 0px black;
+    background-color: #FFCD1D !important;
+    color: black !important;
+    padding: 13px !important;
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+    font-weight: 600 !important;
+    margin-top: 50px;
+  }
+
+  .last-con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:879px;
+    padding-top:200px;
+  }
+
+  .thanks-img{
+    padding-bottom: 100px;
+    width: 150px;
+  }
+
+  .my-email{
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    border-bottom: 1.5px solid #FFCD1D;
+  }
+
+  .last-text{
+    
+    padding: 25px;
+    border-radius: 0 !important;
+    border: 3px solid black;
+  }
+
+  .dog-img{
+    width: 250px;
+    margin-left: 280px;
+    margin-bottom: -18px;
+    z-index: 100;
+  }
+
+  .thought {
+    display:flex;
+    background-color: #FFCD1D;
+    padding:20px;
+    border-radius:30px;
+    min-width:40px;
+    max-width:220px;
+    min-height:40px;
+    margin:20px;
+    position:relative;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    margin-left: 150px;
+    
+  }
+
+  .thought:before,
+.thought:after {
+  content:"";
+  border: 2px solid #FFCD1D;
+  background-color: #FFCD1D;
+  border-radius:50%;
+  display:block;
+  position:absolute;
+  z-index:-1;
+  
+}
+
+.thought:before {
+  width:44px;
+  height:44px;
+  top:-12px;
+  left:28px;
+  box-shadow:-50px 30px 0 -12px #FFCD1D;
+}
+.thought:after {
+  bottom:-10px;
+  right:26px;
+  width:30px;
+  height:30px;
+  box-shadow:40px -34px 0 0 #FFCD1D,
+             -28px -6px 0 -2px #FFCD1D,
+             -24px 17px 0 -6px #FFCD1D,
+             -5px 25px 0 -10px #FFCD1D;
+  
+}
