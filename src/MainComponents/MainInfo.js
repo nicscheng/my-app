@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, Fragment } from 'react';
 
 import Button from 'react-bootstrap/esm/Button';
 import Container from 'react-bootstrap/Container';
@@ -8,13 +8,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FaAngleDoubleRight, FaAngleRight, FaArrowLeft, FaArrowRight, FaBootstrap, FaCircle, FaCrosshairs, FaCss3, FaDatabase, FaDotCircle, FaEnvelope, FaGithub, FaHandPointRight, FaHtml5, FaJava, FaJs, FaLongArrowAltRight, FaMapMarkerAlt, FaMapPin, FaNodeJs, FaPhoneAlt, FaPrescriptionBottleAlt, FaPython, FaReact, FaSmile, FaSmileBeam, FaSmileWink } from 'react-icons/fa';
 import Carousel from 'react-bootstrap/Carousel';
 import MyComponent from '../OtherComponents/MyCarousel';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Switch, Route, Link, Routes, Router } from 'react-router-dom';
 import {ReactDOM} from 'react-dom'
 
 const LastPage = () => {
     return(
         <>
-        <div className='last-con'>
+        <div className='last-con' id='my-email'>
             <div class="thought"><span style={{ fontWeight: 'bold' }}>thank you!</span></div>
             <img className='dog-img' src='../dog.svg' />
             <div className='last-text'>
@@ -27,12 +27,19 @@ const LastPage = () => {
 }
 
 
-
-
 const AboutMe = () => {
+    const smoothScrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          window.scrollTo({
+            behavior: 'smooth',
+            top: element.offsetTop - 50,
+          });
+        }
+      };
     return(
         <>
-        <div className='about-me'>
+        <div className='about-me' id='about-me'>
             <Navbar/>
             <div className='row about-con'>
                     <div className='col-sm-5 pic-con'>
@@ -49,14 +56,12 @@ const AboutMe = () => {
                         A huge fan of video games, sitcoms, outdoor activities, and of course, programming.
                         </div>
 
-
-
                             Interested in the entire backend spectrum and learning new possibilities with interesting people. Databases are my kind of chef’s kiss.
 
                         </div>
     
                         <div className='mt-5'>
-                            <Button className='btn-skills'>
+                            <Button onClick={() => smoothScrollToSection('skill-content')}  className='btn-skills'>
                                 MY SKILLS
                                 <span className='box-arrows'>
                                     <FaLongArrowAltRight/>
@@ -156,7 +161,7 @@ const MyWorks = () => {
     } 
     return (
         <>
-            <div className='bg-carousel' >
+            <div className='bg-carousel' id='my-works' >
             <Navbar/>
                 <div className='my-works' >
                     <img
@@ -209,6 +214,7 @@ const MyWorks = () => {
                         </button>
                     </div>
                 </div>
+                
             </div>
 
         </>
@@ -216,8 +222,19 @@ const MyWorks = () => {
     )
 }
 const SkillContent = () => {
+
+    const smoothScrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          window.scrollTo({
+            behavior: 'smooth',
+            top: element.offsetTop - 50,
+          });
+        }
+      };
+
     return (
-        <div className='skill-con'>
+        <div className='skill-con' id='skill-content'>
 
             <div><div className='here-is'></div>
                 <img className='skills-text' src='../skill.png' /></div>
@@ -271,7 +288,7 @@ const SkillContent = () => {
             </div>
 
             <div className='mt-5'>
-                <Button className='btn-works'>
+                <Button onClick={() => smoothScrollToSection('my-works')}  className='btn-works'>
                     MY WORKS
                     <span className='box-arrows'>
                         <FaLongArrowAltRight/>
@@ -286,12 +303,20 @@ const SkillContent = () => {
 
 const Navbar = () => {
 
-    
+    const smoothScrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          window.scrollTo({
+            behavior: 'smooth',
+            top: element.offsetTop - 50,
+          });
+        }
+      };
 
     return (
         <NavbarReact collapseOnSelect expand="lg" variant='light' className=" bg-navbar">
             <Container >
-                <NavbarReact.Brand href="#home">
+                <NavbarReact.Brand onClick={() => smoothScrollToSection('my-intro')} >
                     {/*<img className='my-logo' src='../my_logo.svg'/>*/}
                     <div><img className='nicole' src='../nicole.png' /></div>
                 </NavbarReact.Brand>
@@ -300,23 +325,29 @@ const Navbar = () => {
                     <Nav className="me-auto">
                     </Nav>
                     <Nav className='right-side' >
-                        <Nav.Link className='navlink'  eventKey={1} >   
+                        <Nav.Link  onClick={() => smoothScrollToSection('about-me')} className='navlink'  eventKey={1} >   
                         <span className='arrow'>
                         <FaAngleRight/>
                         </span>
                             me
                         </Nav.Link>
-                        <Nav.Link href="#deets"  eventKey={2} className='navlink'>
+                        <Nav.Link onClick={() => smoothScrollToSection('skill-content')} eventKey={2} className='navlink'>
                         <span className='arrow'>
                             <FaAngleRight/>
                         </span>
                             skills
                             </Nav.Link>
-                        <Nav.Link className='navlink'  eventKey={3} >
+                        <Nav.Link onClick={() => smoothScrollToSection('my-works')}  className='navlink'  eventKey={3} >
                         <span className='arrow'>
                             <FaAngleRight/>
                         </span>
                             portfolio
+                        </Nav.Link>
+                        <Nav.Link onClick={() => smoothScrollToSection('my-email')}  className='navlink'  eventKey={3} >
+                        <span className='arrow'>
+                            <FaAngleRight/>
+                        </span>
+                            email me
                         </Nav.Link>
                         
                         <Nav.Link className='navlink' eventKey={4} href="https://github.com/nicscheng">
@@ -354,8 +385,17 @@ const ContactInfo = () => {
 }
 
 const MyIntro = () => {
+    const smoothScrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          window.scrollTo({
+            behavior: 'smooth',
+            top: element.offsetTop - 50,
+          });
+        }
+      };
     return(
-        <div className='con'>
+        <div className='con' id='my-intro'>
             <Navbar/>
             <div className='row intro-con'>
                 <div className='col-sm-5 logo-con'>
@@ -368,7 +408,7 @@ const MyIntro = () => {
                     Building rich software applications, assessing the quality of each specification, and resolving backend problems for a seamless user experience.
                     </div>
                     <div className='mt-5'>
-                        <Button className='btn-gtk'>
+                        <Button onClick={() => smoothScrollToSection('about-me')}  className='btn-gtk'>
                             GET TO KNOW ME
                             <span className='box-arrows'>
                                 <FaLongArrowAltRight/>
@@ -388,15 +428,35 @@ const MyIntro = () => {
 const MainContent = () => {
 
     return (
-        <>
+        
+            // <Switch>
+            //     <Route exact path='/'>
+            //         <MyIntro />
+            //     </Route>
+
+            //     <Route exact path='/about-me' >
+            //         <AboutMe />
+            //     </Route>
+            //     <Route exact path='/skill-content'>
+            //         <SkillContent />
+            //     </Route>
+            //     <Route exact path='/my-works'>
+            //         <MyWorks />
+            //     </Route>
+            // </Switch>
+            <>
             <MyIntro/>
             <AboutMe/>
             <SkillContent />
             <MyWorks />
-            <LastPage/>      
-        </>
+            <LastPage/>  
+            </>
+              
+        
 
     );
 };
+
+
 
 export default MainContent;
