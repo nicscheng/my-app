@@ -11,6 +11,9 @@ import MyComponent from '../OtherComponents/MyCarousel';
 import { BrowserRouter as Switch, Route, Link, Routes, Router } from 'react-router-dom';
 import {ReactDOM} from 'react-dom'
 
+import { Analytics } from '@vercel/analytics/react';
+
+
 const LastPage = () => {
     return(
         <>
@@ -450,6 +453,7 @@ const MainContent = () => {
             <SkillContent />
             <MyWorks />
             <LastPage/>  
+            <Analytics />
             </>
               
         
